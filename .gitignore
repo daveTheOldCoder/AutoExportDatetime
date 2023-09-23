@@ -3,4 +3,6 @@
 
 # Custom
 addons/godot-git-plugin
+addons/auto_export_datetime/version.gd
+export_presets.cfg
 
