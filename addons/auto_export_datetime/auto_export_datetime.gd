@@ -13,7 +13,7 @@ extends EditorPlugin
 # EditorExportPlugin::_get_name must be overridden before calling.
 
 
-const VERSION_SCRIPT_PATH: String = "res://addons/auto_export_datetime/version.gd"
+const DATETIME_FILE: String = "res://addons/auto_export_datetime/version.gd"
 
 var exporter: AEVExporter
 
@@ -77,5 +77,5 @@ class AEVExporter extends EditorExportPlugin:
 	func store_version(version: String) -> void:
 		var script: GDScript = GDScript.new()
 		script.source_code = 'extends RefCounted\nconst VERSION: String = "%s"\n' % version
-		if ResourceSaver.save(script, VERSION_SCRIPT_PATH) != OK:
+		if ResourceSaver.save(script, DATETIME_FILE) != OK:
 			push_error("Failed to save version file. Make sure the path is valid.")
