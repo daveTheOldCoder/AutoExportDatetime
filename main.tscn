@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b00nuvpc7ap43"]
+
+[ext_resource type="Script" path="res://simple.gd" id="1_oyvlw"]
+[ext_resource type="Script" path="res://detailed.gd" id="2_ojr4n"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Simple" type="Label" parent="."]
+offset_left = 200.0
+offset_top = 100.0
+offset_right = 300.0
+offset_bottom = 123.0
+script = ExtResource("1_oyvlw")
+
+[node name="Detailed" type="RichTextLabel" parent="."]
+offset_left = 200.0
+offset_top = 300.0
+offset_right = 788.0
+offset_bottom = 427.0
+fit_content = true
+script = ExtResource("2_ojr4n")
